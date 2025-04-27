@@ -1,22 +1,22 @@
-import { Link, Outlet } from 'react-router-dom'
-
-
+import { Link, Outlet, Navigate } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Logo from '@/components/logo'
-import NavMenu from '@/components/NavMenu';
+import NavMenu from '@/components/NavMenu'
+
 
 export default function AppLayout() {
-    return (
+    return ( // <- Faltaba este return
         <>
             <header className='bg-gray-800 py-5'>
                 <div className='max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
-                    <div className='w-32 md:w-48 lg:w-64'>
+                    <div className='w-64'>
                         <Link to={'/'}>
                             <Logo />
                         </Link>
                     </div>
 
-                <NavMenu   />
-
+                    <NavMenu />
                 </div>
             </header>
 
@@ -30,7 +30,10 @@ export default function AppLayout() {
                 </p>
             </footer>
 
-          
+            <ToastContainer
+                pauseOnHover={false}
+                pauseOnFocusLoss={false}
+            />
         </>
-    );
+    )
 }

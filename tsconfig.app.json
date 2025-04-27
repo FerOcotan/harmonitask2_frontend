@@ -13,6 +13,16 @@
       "@/views/*" : ["views/*"],
       "@/layouts/*" : ["layouts/*"],
       "@/types/*" : ["types/*"],
+      "@/hooks/*" : ["hooks/*"],
+      "@/utils/*" : ["utils/*"],
+      "@/assets/*" : ["assets/*"],
+      "@/store/*" : ["store/*"],
+      "@/router/*" : ["router/*"],
+      "@/styles/*" : ["styles/*"],
+      "@/api/*" : ["api/*"],
+      "@/lib/*" : ["lib/*"],
+
+
       
   
     },

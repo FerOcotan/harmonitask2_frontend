@@ -1,8 +1,10 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useForm } from 'react-hook-form'
-
+import { useMutation } from '@tanstack/react-query'
+import { toast } from 'react-toastify'
 import ProjectForm from "@/components/projects/ProjectForm"
 import { ProjectFormData } from "@/types/index"
+import { createProject } from "@/api/ProjectAPI"
 
 export default function CreateProjectView() {
 
@@ -15,9 +17,18 @@ export default function CreateProjectView() {
 
     const {register, handleSubmit, formState: {errors}} = useForm({defaultValues: initialValues})
 
-  
+    const {mutate} = useMutation({
+        mutationFn: createProject,
+        onError: (error) => {
+            toast.error(error.message)
+        },
+        onSuccess: (data) => {
+            toast.success(data)
+            navigate('/')
+        }
+    })
 
-    const handleForm = (formData : ProjectFormData) => (formData)
+    const handleForm = (formData : ProjectFormData) => mutate(formData)
 
     return (
         <>
@@ -27,7 +38,7 @@ export default function CreateProjectView() {
 
                 <nav className="my-5 ">
                     <Link
-                        className=" bg-emerald-300-400 hover:bg-emerald-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
+                        className=" bg-purple-400 hover:bg-purple-500 px-10 py-3 text-white text-xl font-bold cursor-pointer transition-colors"
                         to='/'
                     >Volver a Proyectos</Link>
                 </nav>
