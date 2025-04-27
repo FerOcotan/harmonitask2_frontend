@@ -12,6 +12,7 @@
       "@/components/*" : ["components/*"],
       "@/views/*" : ["views/*"],
       "@/layouts/*" : ["layouts/*"],
+      "@/types/*" : ["types/*"],
       
   
     },

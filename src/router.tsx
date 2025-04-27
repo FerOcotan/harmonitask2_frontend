@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AppLayout from "@/layouts/AppLayout";
 import DashboardView from "@/views/DashboardView";
+import CreateProjectView from "./views/projects/CreateProjectView";
 
 export default function Router() {
     return (
@@ -9,6 +10,7 @@ export default function Router() {
                 <Route element={<AppLayout />}>
                     {/* Aquí se usa `index` correctamente para la ruta por defecto */}
                     <Route path="/" element={<DashboardView />} index />
+                    <Route path="/projects/create" element={<CreateProjectView />} index />
                 </Route>
             </Routes>
         </BrowserRouter>
