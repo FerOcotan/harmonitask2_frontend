@@ -1,7 +1,8 @@
 import { Link, Outlet } from 'react-router-dom'
 
 
-import Logo from '../components/logo'
+import Logo from '@/components/logo'
+import NavMenu from '@/components/NavMenu';
 
 export default function AppLayout() {
     return (
@@ -13,6 +14,9 @@ export default function AppLayout() {
                             <Logo />
                         </Link>
                     </div>
+
+                <NavMenu   />
+
                 </div>
             </header>
 
