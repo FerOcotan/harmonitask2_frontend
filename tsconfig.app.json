@@ -20,6 +20,7 @@
       "@/router/*" : ["router/*"],
       "@/styles/*" : ["styles/*"],
       "@/api/*" : ["api/*"],
+      "@/locales/*" : ["locales/*"],
       "@/lib/*" : ["lib/*"],
 
 

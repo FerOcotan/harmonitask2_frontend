@@ -5,7 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateStatus } from "@/api/TaskAPI";
 import { toast } from "react-toastify";
 import { useParams } from "react-router-dom";
-
+import { statusTranslations } from "@/locales/es";
 type TaskListProps = {
   tasks: TaskProject[];
   canEdit: boolean;
