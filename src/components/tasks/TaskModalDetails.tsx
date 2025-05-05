@@ -7,7 +7,7 @@ import { getTaskById, updateStatus } from '@/api/TaskAPI';
 import { formatDate } from '@/utils/utils';
 import { TaskStatus } from '@/types/index';
 import { statusTranslations } from '@/locales/es';
-
+import NotesPanel from '../notes/NotesPanel';
 
 export default function TaskModalDetails() {
     const params = useParams()
@@ -118,6 +118,9 @@ export default function TaskModalDetails() {
                                         </select>
                                     </div>
 
+                                    <NotesPanel 
+                                        notes={data.notes}
+                                    />
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
