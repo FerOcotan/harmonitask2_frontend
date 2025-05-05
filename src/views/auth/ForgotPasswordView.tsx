@@ -31,7 +31,7 @@ export default function ForgotPasswordView() {
         <h1 className="text-5xl font-black text-white">Reestablecer Password</h1>
         <p className="text-2xl font-light text-white mt-5">
             ¿Olvidaste tu password? coloca tu email {''}
-            <span className=" text-fuchsia-500 font-bold"> y reestable tu password</span>
+            <span className=" text-blue-500 font-bold"> y reestable tu password</span>
         </p>
 
       <form
@@ -65,7 +65,7 @@ export default function ForgotPasswordView() {
         <input
           type="submit"
           value='Enviar Instrucciones'
-          className="bg-fuchsia-600 hover:bg-fuchsia-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
+          className="bg-blue-600 hover:bg-blue-700 w-full p-3  text-white font-black  text-xl cursor-pointer"
         />
       </form>
 
