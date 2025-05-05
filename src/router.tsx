@@ -13,6 +13,7 @@ import RequestNewCodeView from "./views/auth/RequestNewCodeView";
 import ForgotPasswordView from "./views/auth/ForgotPasswordView";
 import NewPasswordView from "./views/auth/NewPasswordView";
 import ProjectTeamView from "./views/projects/ProjectTeamView";
+import NotFound from "./components/tasks/404/NotFound";
 
 export default function Router() {
     return (
@@ -37,6 +38,9 @@ export default function Router() {
                     <Route path="/auth/new-password" element={<NewPasswordView/>} index />
                 
                 </Route>
+
+                {/* Ruta no encontrada */}
+                <Route path="/404" element={<NotFound />} />
 
             </Routes>
         </BrowserRouter>

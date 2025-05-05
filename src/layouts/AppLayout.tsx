@@ -21,7 +21,7 @@ export default function AppLayout() {
             <header className='bg-black py-5'>
                 <div className='max-w-screen-2xl mx-auto flex flex-col lg:flex-row justify-between items-center'>
                     <div className='w-64'>
-                        <Link to={'/'}>
+                        <Link to={'/auth/login'}>
                             <Logo />
                         </Link>
                     </div>
